@@ -30,7 +30,7 @@
 
 		<!-- Wordpress Head Items -->
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-
+<link href='http://fonts.googleapis.com/css?family=Antic' rel='stylesheet' type='text/css'>
 		<?php wp_head(); ?>
 	</head>
 
@@ -48,6 +48,14 @@
 
 				<div id="head_funct">
 					<ul class="tabs">
+						<li><a href="/forums">Forum</a></li>
+						<li><a href="/slide">Releases</a></li>
+						<li><a href="/slide/reader/team/foolrulez">Team</a></li>
+						<li><a href="http://ask.foolrulez.com">Help</a></li>
+						<li><a href="http://foolslide.org">FoOlSlide</a></li>
+					</ul>
+					
+					<ul class="panel">
 						<li><a href="/forums">Forum</a></li>
 						<li><a href="/slide">Releases</a></li>
 						<li><a href="/slide/reader/team/foolrulez">Team</a></li>
