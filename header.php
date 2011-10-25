@@ -30,13 +30,13 @@
 
 		<!-- Wordpress Head Items -->
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-<link href='http://fonts.googleapis.com/css?family=Antic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Antic' rel='stylesheet' type='text/css'>
 		<?php wp_head(); ?>
 	</head>
 
-	<body>
+	<body <?php body_class(); ?>>
 		<div id="iamninetysixty"></div>
-		<header>
+		<header id="header">
 			<div class="ninetysixty">
 				<div id="logo">
 					<a href="/blog"><h1>FoOl<span>Rulez</span></h1></a>
@@ -45,24 +45,113 @@
 					<img src="<?php bloginfo('template_url') ?>/images/facebook.png" />
 					<img src="<?php bloginfo('template_url') ?>/images/RSS.png" />
 				</div>
+				<ul id="header_panel">
+					<li>
+						<div id="forum_latest_panel">
+							<h3>These are the most recent forum threads</h3>
+							<p>Loading...</p>
+						</div>
+					</li>
+					<li>
+						<div id="slide_latest_panel">
+							<h3>These are the most recent releases</h3>
+							<p>Loading...</p>
+						</div>
+					</li>
+					<li>
+						<div>
+							<h3>This is the list of all our team members</h3>
+							<table style="width:100%;">
+								<tr>
+									<?php
+									$ourcontacts = array(
+										//"main" => array("name", "position", "website", "href", "twitter"),
+										"Darais" => array("Darais", "boss and editor", "tumblr", "http://darais.tumblr.com/", "DaraisTenko"),
+										"Z-Virus" => array("Z-Virus", "co-boss and proofreader", "", "", ""),
+										"woxxy" => array("Woxxy", "secretary and programmer", "woxxy.org", "http://woxxy.org", "woxxy"),
+										"guorbatschow" => array("guorbatschow", "substitute boss", "guorbatschow.org", "http://guorbatschow.com", "guorbatschow"),
+										"gebakkenvis" => array("gebakkenvis", "always been here", "", "", "gebakkenvis"),
+										"Sivert" => array("Sivert", "workpony", "", "", "siveruu"),
+										"Necrophantasia" => array("Necrophantasia", "canasian in Japan", "ninjapan.org", "http://ninjapan.org", "necrophantasia"),
+										"MLLofTUHC" => array("MLLofTUHC", "Dr.translator", "", "", "MLLofTUHC"),
+										"Seito" => array("Seito", "SYDded", "", "", "seitokaiyakuin"),
+										"formerly" => array("formerly", "Tonnura-fag", "pixiv", "http://www.pixiv.net/member.php?id=119705", "vedasisme"),
+										"highwind" => array("highwind", "tinkle proofreader", "", "", "tinklewind"),
+										"Fadamor" => array("fadamor", "busy proofreader", "", "", "fadamor"),
+										"DKW" => array("DKW", "proofreader in CAPS", "", "", ""),
+										"GBolt" => array("GBolt", "trollreader", "", "", "gbolt_0"),
+										"Toshi" => array("Toshi", "proofreads them lolis", "", "", "acatirl"),
+										"Elemhunter1" => array("Elemhunter1", "nick-proof", "", "", "Elemhunter1"),
+										"asianaussie" => array("asianaussie", "proofing and slipping", "", "", ""),
+										"scizzer12" => array("scizzer12", "edits on commodore", "", "", "scizzer12"),
+										"muge" => array("muge", "editor... designer", "muge.hacked.jp", "http://muge.hacked.jp", "mugematic"),
+										"alphonse" => array("alphonse", "fasteditor", "", "", "alphonse2000"),
+										"urielmatt" => array("urielmatt", "artistic editor", "deviantart.com", "http://urielmatt.deviantart.com", "urielmatt"),
+										"Entry-level" => array("Entry-level", "Entry level editor", "", "", ""),
+										"clannad3" => array("Clannad3", "Another tinkleditor?", "", "", ""),
+										"benner" => array("Benner", "beaner editor", "", "", "bennnner"),
+										"scarlet_meister" => array("Scarlet_Meister", "Germaneditor", "", "", "")
+									);
 
-				<div id="head_funct">
-					<ul class="tabs">
-						<li><a href="/forums">Forum</a></li>
-						<li><a href="/slide">Releases</a></li>
-						<li><a href="/slide/reader/team/foolrulez">Team</a></li>
-						<li><a href="http://ask.foolrulez.com">Help</a></li>
-						<li><a href="http://foolslide.org">FoOlSlide</a></li>
-					</ul>
-					
-					<ul class="panel">
-						<li><a href="/forums">Forum</a></li>
-						<li><a href="/slide">Releases</a></li>
-						<li><a href="/slide/reader/team/foolrulez">Team</a></li>
-						<li><a href="http://ask.foolrulez.com">Help</a></li>
-						<li><a href="http://foolslide.org">FoOlSlide</a></li>
-					</ul>
-				</div>
+									$onecount = 0;
+									foreach ($ourcontacts as $item)
+									{
+										/* $onecount++;
+										  echo '<tr><td class="tdwithaline" style="font-size:12px; font-weigth:bold;">';
+										  if ($item[2] != "")
+										  echo '<a target="_blank" href="' . $item[3] . '">' . $item[0] . '</a>';
+										  else
+										  echo $item[0];
+										  echo '</td><td class="tdwithaline">' . $item[1] . '</td>';
+										  if ($item[4] != "")
+										  echo '<td class="tdwithaline"><a target="_blank" class="twitter-follow-button" data-show-screen-name="false" data-width="150px" href="http://twitter.com/' . $item[4] . '">@' . $item[4] . '</a></td>';
+										  else
+										  echo '<td class="tdwithaline"></td>';
+										  echo '</tr>';
+										  if ($onecount == 13)
+										  echo "</table><table style='font-size:12px;'><tr style='font-size:12px;'><td><b>Nick</b></td><td><b>Position</b></td><td><b>Twitter</b></td></b>";
+										 */
+										if ($onecount % 4 == 0 && $onecount > 0)
+										{
+											echo '</tr><tr>';
+										}
+
+										echo '<td class="tdwithaline" style="font-size:12px; font-weigth:bold;">';
+										if ($item[2] != "")
+											echo '<a target="_blank" href="' . $item[3] . '">' . $item[0] . '</a>';
+										else
+											echo $item[0];
+										echo '</td>';
+										$onecount++;
+									}
+									?>
+								</tr>
+							</table>
+						</div>
+					</li>
+					<li>
+						<div>
+							<p>Problem?</p>
+							<h2>Ask FoOlRulez</h2>
+							<p>Be it a question on scanlation, on our software, or if you have issues with your server, "Ask FoOlRulez" is where you (might) get your questions answered.</p>
+							<p>Oh, and there are the achievements.<br/>That's the best part actually.</p>
+						</div>
+					</li>
+					<li>
+						<div>
+							<h3>FoOlSlide is our Open Source comic manager</h3>
+							<img src="http://i.imgur.com/ENx1c.png" style="width:300px;"/>
+							<p>It won't help you saving the world, but sure as hell this is the best reading experience you can give to your users.</p>
+						</div>
+					</li>
+				</ul>
+				<ul id="header_tabs">
+					<li><a href="/forums">Forum</a></li>
+					<li><a href="/slide">Releases</a></li>
+					<li><a href="/slide/reader/team/foolrulez">Team</a></li>
+					<li><a href="http://ask.foolrulez.com" target="_blank">Ask</a></li>
+					<li><a href="http://wiki.foolslide.org" target="_blank">FoOlSlide</a></li>
+				</ul>
 			</div>
 		</header>
 

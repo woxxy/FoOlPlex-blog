@@ -310,7 +310,7 @@ HTML Boilerplate styles can be found in the html5-boilerplate/css directory.
 
 body {
 	background: #83B5D6;
-	color: #63004D;
+	color: #5e3c66;
 }
 
 .ninetysixty {
@@ -320,29 +320,34 @@ body {
 
 /* HEADER */
 
-header {
+#header {
 	height: 200px;
-	padding:10px;
 	background: #487492;
 	border-bottom:2px solid #E4CDDF;
 	box-shadow: inset 0px -5px 12px #335973;
 	color:#E4CDDF;
 	font-family: Georgia, "Times New Roman", Times, serif;
+	opacity:0.9;
+	text-align:center;
+	margin-bottom:25px;
+	overflow:hidden;
 }
 
-header a, header a:visited {
+#header a, #header a:visited {
 	color: inherit;
 	text-decoration: none;
 }
 
-header a:hover {
+#header a:hover {
 	color: #d2acca;
 }
 
 #logo {
 	float:left;
-	padding: 0 30px 0 0;
-	margin-top:-16px;
+	width:350px;
+	text-align:center;
+	padding: 0 0px 0 0;
+	margin-top:-3px;
 }
 
 #logo h1 {
@@ -363,30 +368,85 @@ header a:hover {
 }
 
 #logo img {
-	margin-top:16px;
-	margin-right:38px;
+	margin:16px 5px 0;
 }
 
-#head_funct {
-	height:180px;
-	margin-left:360px;
-}
-
-#head_funct .tabs {
+#header_tabs {
 	font-size:1.5em;
 	margin:0;
 	padding:0;
+	height:100%;
+	list-style:none;
+	margin: 0 auto;
+	width:220px;
+	padding: 0 10px;
+	overflow:hidden;
+	text-align:center;
 }
 
-#head_funct .tabs li {
+#header_tabs li {
 	margin-top:13px;
+	text-align:center;
+}
+
+#header_panel {
+	float:right;
+	width:350px;
+	height:200px;
+	padding:0;
+	margin:0;
+	list-style:none;
+	overflow:hidden;
+}
+
+#header_panel li {
+	height:100%;
+	width:100%;
+}
+
+#header_panel li div {
+	padding:5px;
+	text-align:center;
 }
 
 
 
+/* HOME */
+
+a {
+	color:inherit;
+}
+
+.small-article {
+	width: 300px;
+	overflow:hidden;
+	text-align:center;
+	float:right;
+	padding:10px;
+}
+
+.small-article h2 {
+	padding:0;
+	margin:0;
+}
+
+.small-article time, .small-article .author {
+	font-size:0.7em;
+}
 
 
+/* FOOTER */
 
+#footer {
+	background: #487492;
+	border-top:2px solid #E4CDDF;
+	color:#E4CDDF;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	opacity:0.9;
+	text-align:center;
+	margin-top:25px;
+	overflow:hidden;
+}
 
 /* ==|== media queries ======================================================
    PLACEHOLDER Media Queries for Responsive Design.

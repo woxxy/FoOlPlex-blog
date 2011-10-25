@@ -1,7 +1,22 @@
 </div> <!-- end of #main -->
 
-<footer>
+<footer id="footer">
+	<div class="ninetysixty"
+		 <div class="categories">
+			<?php echo(wp_list_categories('title_li=&echo=0')); ?>
 
+			<?php
+			echo wp_list_bookmarks(
+					array(
+						"title_li" => "",
+						"echo" => 0,
+						'title_before' => '',
+						'title_after' => '',
+			));
+			?>
+
+		</div>
+	</div>
 </footer>
 
 
