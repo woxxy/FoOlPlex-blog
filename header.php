@@ -39,12 +39,15 @@
 		<header id="header">
 			<div class="ninetysixty">
 				<div id="logo">
-					<a href="/blog"><h1>FoOl<span>Rulez</span></h1></a>
+					<a href="/blog"><h1>FoOlRulez</h1></a>
 					<h3>We translate it because we want to read it.</h3>
+				</div>
+				<div class="social">
 					<img src="<?php bloginfo('template_url') ?>/images/twitter.png" />
 					<img src="<?php bloginfo('template_url') ?>/images/facebook.png" />
 					<img src="<?php bloginfo('template_url') ?>/images/RSS.png" />
 				</div>
+				<?php /*
 				<ul id="header_panel">
 					<li>
 						<div id="forum_latest_panel">
@@ -96,21 +99,6 @@
 									$onecount = 0;
 									foreach ($ourcontacts as $item)
 									{
-										/* $onecount++;
-										  echo '<tr><td class="tdwithaline" style="font-size:12px; font-weigth:bold;">';
-										  if ($item[2] != "")
-										  echo '<a target="_blank" href="' . $item[3] . '">' . $item[0] . '</a>';
-										  else
-										  echo $item[0];
-										  echo '</td><td class="tdwithaline">' . $item[1] . '</td>';
-										  if ($item[4] != "")
-										  echo '<td class="tdwithaline"><a target="_blank" class="twitter-follow-button" data-show-screen-name="false" data-width="150px" href="http://twitter.com/' . $item[4] . '">@' . $item[4] . '</a></td>';
-										  else
-										  echo '<td class="tdwithaline"></td>';
-										  echo '</tr>';
-										  if ($onecount == 13)
-										  echo "</table><table style='font-size:12px;'><tr style='font-size:12px;'><td><b>Nick</b></td><td><b>Position</b></td><td><b>Twitter</b></td></b>";
-										 */
 										if ($onecount % 4 == 0 && $onecount > 0)
 										{
 											echo '</tr><tr>';
@@ -145,7 +133,10 @@
 						</div>
 					</li>
 				</ul>
+				 * 
+				 */?>
 				<ul id="header_tabs">
+					<li><a href="/blog">Blog</a></li>
 					<li><a href="/forums">Forum</a></li>
 					<li><a href="/slide">Releases</a></li>
 					<li><a href="/slide/reader/team/foolrulez">Team</a></li>

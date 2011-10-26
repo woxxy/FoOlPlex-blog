@@ -280,12 +280,9 @@ HTML Boilerplate styles can be found in the html5-boilerplate/css directory.
 }
 
 .sticky {
-	background: #f7f7f7;
-	padding: 0 10px 10px;
 }
 	
 .sticky h2 {
-	padding-top: 10px;
 }
 
 /* ==|== primary styles =====================================================
@@ -309,8 +306,8 @@ HTML Boilerplate styles can be found in the html5-boilerplate/css directory.
 
 
 body {
-	background: #83B5D6;
-	color: #5e3c66;
+	background:url(images/subtle_freckles.png) #eee;
+	color: #485152
 }
 
 .ninetysixty {
@@ -318,14 +315,18 @@ body {
 	width:960px;
 }
 
+.sixtyfourty {
+	width:640px;
+}
+
 /* HEADER */
 
 #header {
-	height: 200px;
+	height: 48px;
 	background: #487492;
-	border-bottom:2px solid #E4CDDF;
-	box-shadow: inset 0px -5px 12px #335973;
-	color:#E4CDDF;
+	background:url(images/green-fibers.png) #333;
+	border-bottom:2px solid #dedede;
+	color:#dedede;
 	font-family: Georgia, "Times New Roman", Times, serif;
 	opacity:0.9;
 	text-align:center;
@@ -344,101 +345,233 @@ body {
 
 #logo {
 	float:left;
-	width:350px;
 	text-align:center;
-	padding: 0 0px 0 0;
-	margin-top:-3px;
+	padding: 2px 0px 0 0;
+	width:190px;
 }
 
 #logo h1 {
 	font-weight: normal;
-	font-size:6em;
+	font-size:3em;
 	margin:0;
 	padding:0;
-}
-
-#logo h1 span {
-	font-size:65%;
 }
 
 #logo h3 {
 	margin:-10px 0 0;
 	padding:0;
-	font-size:104%;
+	font-size:75%;
+	display:none;
 }
 
-#logo img {
-	margin:16px 5px 0;
+#header .social {
+	width:120px;
+	float:left;
+	margin-top:10px;
+}
+
+#header .social img {
+	width:32px;
 }
 
 #header_tabs {
 	font-size:1.5em;
 	margin:0;
 	padding:0;
-	height:100%;
 	list-style:none;
 	margin: 0 auto;
-	width:220px;
-	padding: 0 10px;
 	overflow:hidden;
 	text-align:center;
+	float:right;
+	margin: 0 -10px 0 0;
 }
 
 #header_tabs li {
-	margin-top:13px;
 	text-align:center;
+	float:left;
+	margin: 14px 10px;
 }
 
-#header_panel {
-	float:right;
-	width:350px;
-	height:200px;
-	padding:0;
-	margin:0;
-	list-style:none;
-	overflow:hidden;
-}
 
-#header_panel li {
-	height:100%;
-	width:100%;
-}
 
-#header_panel li div {
-	padding:5px;
-	text-align:center;
-}
 
 
 
 /* HOME */
 
-a {
+a, a:visited {
 	color:inherit;
 }
 
-.small-article {
-	width: 300px;
-	overflow:hidden;
+a:hover{
+	text-decoration:underline;
+	color:#889192;
+}
+
+aside.notice {
+	color:#485152;
+	line-height:160%;
+	float:left;
+	width:300px;
+	padding-right:17px;
+	text-shadow:0px 0px 1px #666;
+	text-shadow:0px 0px 1px rgba(0,0,0,0.3);
+	border-right: 3px solid #485152;
+	padding-bottom:25px;
+}
+
+
+aside.notice h4 {
+	font-size:2.6em;
+	font-weight:normal;
 	text-align:center;
-	float:right;
-	padding:10px;
+}
+
+aside.notice p {
+	font-size:120%;
+}
+
+aside.notice ul {
+	padding-left:18px;
+}
+
+aside.notice ul li {
+}
+
+.small-article {
+	text-align:center;
+	float:left;
+	padding:10px 10px 20px;
+	margin: 0px 0px 10px 30px;
+	position:relative;
+	border-bottom: 1px solid #485152;
 }
 
 .small-article h2 {
 	padding:0;
 	margin:0;
+	font-size:2em;
+	text-decoration: none;
+}
+
+.small-article h2 a {
+	text-decoration:none;
+}
+
+
+
+.small-article .text {
+	width:300px;
+	margin:0px 20px 10px 10px;
+	font-size:0.8em;
+	text-overflow: ellipsis;
+	overflow:hidden;
+	float:left;
 }
 
 .small-article time, .small-article .author {
 	font-size:0.7em;
 }
 
+.small-article .image{
+	box-shadow:0px 1px 3px rgba(0,0,0,0.4);
+	width:260px;
+	height:150px;
+	background:#fff;
+	float:left;
+	position:relative;
+}
+
+.small-article img.type-home{
+	border-radius:2px;
+	opacity:0.85;
+}
+
+.small-article img.type-home:hover {
+	opacity:1;
+}
+
+.small-article footer {
+	overflow:hidden;
+	position:absolute;
+	bottom:6px;
+	right:6px;
+	color: #b3b3b3;
+	background:url(images/subtle_freckles.png) #eee;
+	padding: 3px 8px 0px 6px;
+	font-weight:bold;
+	font-size:1.8em;
+	border-radius:4px;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	box-shadow:inset 0px 1px 3px rgba(0,0,0,0.4);
+
+}
+
+.small-article footer img{
+	position:static;
+	width:34px;
+	opacity:1.0;
+}
+
+
+/* SINGLE POST */
+
+.single aside {
+	margin-top:100px;
+	width: 150px;
+	min-height:200px;
+	padding:6px;
+}
+
+.single aside h3 {
+	text-align:center;
+}
+
+
+.single aside.single_right {
+	float:right;
+	border-left: 3px solid #485152;
+}
+.single aside.single_left {
+	text-align:center;
+	float:left;
+	border-right: 3px solid #485152;
+}
+
+.single article {
+	padding:10px;
+	font-size:1.2em;
+}
+
+.single article header .image {
+	text-align:center;
+	margin-bottom:30px;
+}
+
+.single article header .image img{
+	max-width:100%;
+	max-height:300px;
+	text-align:center;
+}
+
+
+.single article h2 {
+	text-align:center;
+	font-size:2em;
+}
+
+.single article .time {
+	font-size:0.8em;
+	text-align:center;
+}
+
+
 
 /* FOOTER */
 
 #footer {
-	background: #487492;
+	background:url(images/green-fibers.png) #333;
 	border-top:2px solid #E4CDDF;
 	color:#E4CDDF;
 	font-family: Georgia, "Times New Roman", Times, serif;
