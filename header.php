@@ -46,16 +46,16 @@
 				</div>
 				<div class="social">
 					<a href="http://twitter.com/FoOlRulez" target="_blank" title="Official FoOlRulez Twitter account">
-						<img class="icon_on" src="<?php bloginfo('template_url') ?>/images/twitter.png" />
-						<img class="icon_off" src="<?php bloginfo('template_url') ?>/images/twitter_hover.png" />
+						<img class="icon_on" width="32" height="32" src="<?php bloginfo('template_url') ?>/images/twitter.png" />
+						<img class="icon_off" width="32" height="32" src="<?php bloginfo('template_url') ?>/images/twitter_hover.png" />
 					</a>
 					<a href="http://facebook.com/FoOlRulez" target="_blank" title="Official FoOlRulez Facebook page">
-						<img class="icon_on" src="<?php bloginfo('template_url') ?>/images/facebook.png" />
-						<img class="icon_off" src="<?php bloginfo('template_url') ?>/images/facebook_hover.png" />
+						<img class="icon_on" width="32" height="32" src="<?php bloginfo('template_url') ?>/images/facebook.png" />
+						<img class="icon_off" width="32" height="32" src="<?php bloginfo('template_url') ?>/images/facebook_hover.png" />
 					</a>
 					<a href="/blog/feed" title="Blog RSS feed">
-						<img class="icon_on" src="<?php bloginfo('template_url') ?>/images/RSS.png" />
-						<img class="icon_off" src="<?php bloginfo('template_url') ?>/images/RSS_hover.png" />
+						<img class="icon_on" width="32" height="32" src="<?php bloginfo('template_url') ?>/images/RSS.png" />
+						<img class="icon_off" width="32" height="32" src="<?php bloginfo('template_url') ?>/images/RSS_hover.png" />
 					</a>
 				</div>
 				<nav id="header_tabs">

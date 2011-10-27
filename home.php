@@ -40,7 +40,7 @@ $counter = 0;
 			'link_to_post' => false, 'width' => 260, 'height' => 150));
 				?></a>
 						<footer>
-							<?php comments_popup_link('<img src="' . get_bloginfo('template_url') . '/images/comments.png" /> 0', ' <img src="' . get_bloginfo('template_url') . '/images/comments.png" />1', '<img src="' . get_bloginfo('template_url') . '/images/comments.png" /> %', '', ' <img src="' . get_bloginfo('template_url') . '/images/comments.png" /> Off'); ?>
+							<?php comments_popup_link('<img width="72" height="72" src="' . get_bloginfo('template_url') . '/images/comments.png" /> 0', ' <img width="72" height="72" src="' . get_bloginfo('template_url') . '/images/comments.png" />1', '<img src="' . get_bloginfo('template_url') . '/images/comments.png" /> %', '', ' <img width="72" height="72" src="' . get_bloginfo('template_url') . '/images/comments.png" /> Off'); ?>
 						</footer>
 					</div>
 				</article>

@@ -744,13 +744,25 @@ ol.commentlist #respond {
 	width:300px;
 	margin:10px;
 	float:left;
-	height:320px;
 	text-align:center;
 }
 
 .archive header h3 {
 	margin-bottom:3px;
 }
+
+.archive header h3 a {
+	text-decoration: none;
+}
+
+.archive header time {
+	font-size:0.8em;
+	margin-bottom:3px;
+}
+
+.archive header h3 a {
+}
+
 
 
 .archive header .image img {
