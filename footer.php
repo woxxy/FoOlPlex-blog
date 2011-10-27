@@ -1,8 +1,8 @@
 </div> <!-- end of #main -->
 
 <footer id="footer">
-	<div class="ninetysixty"
-		 <div class="categories">
+	<div class="ninetysixty">
+		 <ul class="categories">
 			<?php echo(wp_list_categories('title_li=&echo=0')); ?>
 
 			<?php
@@ -14,8 +14,19 @@
 						'title_after' => '',
 			));
 			?>
-
-		</div>
+			 <li>All the rest
+				 <ul>
+					 <li>This website is proudly powered by Wordpress.</li>
+					 <li>This theme is FoOlPlex, created by us.</li>
+					 <li>• • •</li>
+					 <li>We make no claim to own the manga releases that we've translated and that we display on this site, and we'll be more than happy to remove the content if the owner asks us to, even informally, as long as we can identify him as such.</li>
+					 <li>• • •</li>
+					 <li>Unless stated otherwise, all our webpages are under <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" /></a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.</li>
+					 <li>• • •</li>
+					 <li>Remember that we are good boys and that we love hugs.</li>
+				 </ul>
+			 </li>
+		</ul>
 	</div>
 </footer>
 

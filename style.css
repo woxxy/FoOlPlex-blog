@@ -218,40 +218,37 @@ td { vertical-align: top; }
 
 
 
-/*
-Theme Name: Notizie in mobilità
-Theme URI: http://notizieinmobilita.it
-Description: Tema per notizie in mobilità. Basato sull'<a href="http://html5boilerplate.com">HTML5 Boilerplate</a>.
-Version: 1.0
-Author: Matteo Garbin
-Author URI: 
-Tags: white, two-columns
-License: GNU General Public License v2.0
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-
-*/
-
-/*
-HTML Boilerplate styles can be found in the html5-boilerplate/css directory.
-*/
-
-
-
-
-
 /* WordPress Required Styles */
+
+blockquote {
+	border-left:3px solid #485152;
+	margin-left:10px;
+	padding-left:10px;
+}
+
+.size-full {
+	max-width:630px;
+	height:auto;
+}
+
 .aligncenter {
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 6px auto;
+	text-align:center;
 }
 
 .alignleft {
 	float: left;
+	margin: 6px 10px 6px 0;
 }
 
 .alignright {
 	float: right;
+	margin: 6px 0 6px 10px;
+}
+
+.alignnone {
+	margin: 6px;
 }
 
 .wp-caption {
@@ -259,12 +256,18 @@ HTML Boilerplate styles can be found in the html5-boilerplate/css directory.
 	text-align: center;
 	background-color: #f3f3f3;
 	padding-top: 4px;
-	margin: 10px;
 	-moz-border-radius: 3px;
 	-khtml-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
+	margin:10px inherit;
+	overflow:hidden;
 }
+
+.wp-caption p {
+	margin: 8px 4px 4px;
+}
+
 
 .wp-caption img {
 	margin: 0;
@@ -279,6 +282,12 @@ HTML Boilerplate styles can be found in the html5-boilerplate/css directory.
 	margin: 0;
 }
 
+.gallery-caption {
+	margin:5px;
+	font-size:0.7em;
+	line-height:120%;
+}
+
 .sticky {
 }
 	
@@ -291,23 +300,10 @@ HTML Boilerplate styles can be found in the html5-boilerplate/css directory.
 
 /* BODY */
 
-#iamninetysixty {
-	position:fixed;
-	top:0px;
-	bottom:0px;
-	left: 50%;
-	margin-left:-480px;
-	width:960px;
-	border-right: 1px solid #fe57a1;
-	border-left: 1px solid #fe57a1;
-	z-index:-1;
-	display:none;
-}
-
-
 body {
 	background:url(images/subtle_freckles.png) #eee;
-	color: #485152
+	color: #485152;
+	padding-top:58px;
 }
 
 .ninetysixty {
@@ -322,16 +318,20 @@ body {
 /* HEADER */
 
 #header {
-	height: 48px;
+	height: 41px;
 	background: #487492;
 	background:url(images/green-fibers.png) #333;
 	border-bottom:2px solid #dedede;
 	color:#dedede;
 	font-family: Georgia, "Times New Roman", Times, serif;
-	opacity:0.9;
 	text-align:center;
 	margin-bottom:25px;
 	overflow:hidden;
+	position:fixed;
+	width:100%;
+	z-index:1000;
+	top:0;
+	box-shadow: 0px 1px 3px #333, inset 0px -1px 0px;
 }
 
 #header a, #header a:visited {
@@ -345,9 +345,8 @@ body {
 
 #logo {
 	float:left;
-	text-align:center;
-	padding: 2px 0px 0 0;
-	width:190px;
+	margin: -3px 0px 0 0;
+	width:200px;
 }
 
 #logo h1 {
@@ -367,7 +366,7 @@ body {
 #header .social {
 	width:120px;
 	float:left;
-	margin-top:10px;
+	margin-top:5px;
 }
 
 #header .social img {
@@ -386,11 +385,25 @@ body {
 	margin: 0 -10px 0 0;
 }
 
-#header_tabs li {
+#header_tabs a {
+	display:inline-block;
 	text-align:center;
 	float:left;
-	margin: 14px 10px;
+	margin: 9px 10px;
 }
+
+#header .social .icon_off {
+	display:none;
+}
+
+#header .social a:hover .icon_on {
+	display:none;
+}
+
+#header .social a:hover .icon_off {
+	display:inline;
+}
+
 
 
 
@@ -414,43 +427,62 @@ aside.notice {
 	float:left;
 	width:300px;
 	padding-right:17px;
-	text-shadow:0px 0px 1px #666;
-	text-shadow:0px 0px 1px rgba(0,0,0,0.3);
-	border-right: 3px solid #485152;
 	padding-bottom:25px;
 }
 
 
-aside.notice h4 {
+aside.notice h2 {
 	font-size:2.6em;
 	font-weight:normal;
 	text-align:center;
 }
 
 aside.notice p {
-	font-size:120%;
+	font-size:1.1em;
 }
 
-aside.notice ul {
-	padding-left:18px;
+aside.notice dl {
+	margin-left:8px;
 }
 
-aside.notice ul li {
+aside.notice dl a {
+	text-decoration:none;
+}
+
+
+aside.notice dl dt {
+	font-weight:bold;
+	margin-top:3px;
+}
+
+
+aside.notice dl dd {
+	font-size:0.9em;
+	margin-left:18px;
+}
+
+aside.notice dl dd time {
+	color: #bbb;
+	margin-left:8px;
 }
 
 .small-article {
 	text-align:center;
-	float:left;
-	padding:10px 10px 20px;
-	margin: 0px 0px 10px 30px;
+	float:right;
+	padding:10px 10px 20px 60px;
+	margin: 0px 0px 10px 20px;
 	position:relative;
-	border-bottom: 1px solid #485152;
+	border-left: 2px solid #485152;
+}
+
+.small-article:hover {
+	border-left: 2px solid #889192;
 }
 
 .small-article h2 {
 	padding:0;
 	margin:0;
-	font-size:2em;
+	font-size:1.6em;
 	text-decoration: none;
 }
 
@@ -461,16 +493,17 @@ aside.notice ul li {
 
 
 .small-article .text {
-	width:300px;
-	margin:0px 20px 10px 10px;
-	font-size:0.8em;
+	width:260px;
+	margin:0px 15px 0px 5px;
+	font-size:0.9em;
 	text-overflow: ellipsis;
 	overflow:hidden;
 	float:left;
+	text-align: left;
 }
 
 .small-article time, .small-article .author {
-	font-size:0.7em;
+	font-size:0.9em;
 }
 
 .small-article .image{
@@ -480,6 +513,13 @@ aside.notice ul li {
 	background:#fff;
 	float:left;
 	position:relative;
+}
+
+
+.small-article .image a {
+	width:100%;
+	height:100%;
+	display:block;
 }
 
 .small-article img.type-home{
@@ -496,7 +536,6 @@ aside.notice ul li {
 	position:absolute;
 	bottom:6px;
 	right:6px;
-	color: #b3b3b3;
 	background:url(images/subtle_freckles.png) #eee;
 	padding: 3px 8px 0px 6px;
 	font-weight:bold;
@@ -506,6 +545,10 @@ aside.notice ul li {
 	-webkit-border-radius:6px;
 	box-shadow:inset 0px 1px 3px rgba(0,0,0,0.4);
 
+}
+
+.small-article footer a {
+	text-decoration:none;
 }
 
 .small-article footer img{
@@ -518,10 +561,10 @@ aside.notice ul li {
 /* SINGLE POST */
 
 .single aside {
-	margin-top:100px;
-	width: 150px;
+	width: 130px;
 	min-height:200px;
 	padding:6px;
+	overflow:hidden;
 }
 
 .single aside h3 {
@@ -529,19 +572,30 @@ aside.notice ul li {
 }
 
 
-.single aside.single_right {
+.single header aside.single_right {
 	float:right;
 	border-left: 3px solid #485152;
 }
-.single aside.single_left {
+.single header aside.single_left {
 	text-align:center;
 	float:left;
 	border-right: 3px solid #485152;
 }
 
+.single header aside.single_left img {
+	margin:4px;
+	box-shadow:0px 1px 3px rgba(0,0,0,0.4);
+}
+
+.single header aside.single_left .text {
+	font-size:0.8em;
+	width:128px;
+	padding:0;
+	margin:0;
+}
+
 .single article {
-	padding:10px;
-	font-size:1.2em;
+	padding:0 10px 10px;
 }
 
 .single article header .image {
@@ -550,36 +604,200 @@ aside.notice ul li {
 }
 
 .single article header .image img{
-	max-width:100%;
+	max-width:530px;
 	max-height:300px;
 	text-align:center;
+	box-shadow:0px 1px 3px rgba(0,0,0,0.4);
 }
 
-
-.single article h2 {
+.single article header h2 {
 	text-align:center;
 	font-size:2em;
+	padding-bottom:6px;
+	margin-bottom:0px;
+	padding-top:10px;
 }
 
-.single article .time {
-	font-size:0.8em;
+.single article header .time {
+	font-size:0.9em;
+	text-align:center;
+	margin-bottom:10px;
+}
+
+.single article .text {
+	font-size:1.2em;
+	width: 630px; /* take out 10px to fit the weird single header */
+	margin: 0 auto;
+	line-height:140%;
+}
+
+.single article footer {
+	margin:30px auto;
+	width: 640px;
+}
+
+.single article nav {
+	margin: 20px auto;
+	font-size:1.2em;
+	width:800px;
+}
+
+
+
+/* COMMENTS */
+
+h3#comments {
+	margin-top: 50px;
+	font-size:1.8em;
 	text-align:center;
 }
 
+ol.commentlist {
+	margin:0 auto;
+	width:800px;
+	padding-left:0px;
+	font-size:1.1em;
+}
+
+ol.commentlist li {
+	list-style:none;
+	padding: 0px;
+	margin: 10px 0;
+	border-left: 5px solid #485152;  
+	padding-right:0;
+}
+
+ol.commentlist li ul {
+	padding-left: 10px;
+}
+
+ol.commentlist li ul.children li {
+	border-left: 3px solid #485152;  
+}
+
+ol.commentlist li article {
+	padding:0px 10px 0;
+}
+
+ol.commentlist li article header {
+	padding:6px 0px 6px 0;
+	border-bottom: 2px solid #485152;  	
+}
+
+ol.commentlist li article header img {
+	box-shadow:0px 1px 3px rgba(0,0,0,0.4);
+	float:right;
+	position:relative;
+	right:-10px;
+	top: -5px;
+}
+
+ol.commentlist li article nav {
+	margin-bottom:5px;
+	text-align:right;
+	width:auto;
+}
+
+#respond {
+	width:800px;
+	margin: 40px auto;
+}
+
+ol.commentlist #respond {
+	width:90%;
+	padding:10px;
+	margin: 0px auto;
+}
+
+#respond h3{
+	font-size:1.4em;
+	text-align:center;
+}
+
+#respond label{
+	font-size:1.2em;
+}
+
+#respond input{
+	width:250px;
+	font-size:1.2em;
+	padding:3px 5px 2px;
+	border: 2px solid #485152;  
+}
+
+#respond input[type=submit]{
+	background:url(images/green-fibers.png) #333;
+	color:#dedede;
+}
+
+#respond textarea{
+	width:80%;
+	font-size:1.2em;
+	padding:3px 5px;
+	border: 2px solid #485152;  
+}
+
+
+/* ARCHIVES */
+
+.archive article {
+	width:300px;
+	margin:10px;
+	float:left;
+	height:320px;
+	text-align:center;
+}
+
+.archive header h3 {
+	margin-bottom:3px;
+}
+
+
+.archive header .image img {
+	box-shadow:0px 1px 3px rgba(0,0,0,0.4);
+}
 
 
 /* FOOTER */
 
 #footer {
 	background:url(images/green-fibers.png) #333;
-	border-top:2px solid #E4CDDF;
-	color:#E4CDDF;
+	border-top:2px solid #dedede;
+	color:#dedede;
 	font-family: Georgia, "Times New Roman", Times, serif;
 	opacity:0.9;
-	text-align:center;
+	text-align:left;
 	margin-top:25px;
 	overflow:hidden;
+	font-size:1em;
 }
+
+#footer a {
+	text-decoration:none;
+}
+
+#footer ul.categories {
+	list-style: none;
+	text-transform: uppercase;
+	padding-left:0px;
+}
+
+#footer ul.categories > li {
+	padding-left: 28px;
+	float:left;
+}
+
+#footer ul.categories > li > ul {
+	padding-left:20px;
+	line-height:140%;
+	text-transform: none;
+}
+
+#footer ul.categories > li > ul > li {
+	list-style: none;
+	max-width:290px;
+}
+
 
 /* ==|== media queries ======================================================
    PLACEHOLDER Media Queries for Responsive Design.
