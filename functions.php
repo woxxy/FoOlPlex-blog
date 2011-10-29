@@ -17,7 +17,7 @@ add_theme_support( 'post-thumbnails' );
 add_image_size( 'type-home', 260, 150, TRUE);
 
 add_filter('show_admin_bar', '__return_false');
-
+if ( !is_admin() ) wp_deregister_script('jquery'); 
 
 
 

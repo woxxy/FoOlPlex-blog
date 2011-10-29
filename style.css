@@ -303,7 +303,7 @@ blockquote {
 body {
 	background:url(images/subtle_freckles.png) #eee;
 	color: #485152;
-	padding-top:58px;
+	padding-top:65px;
 }
 
 .ninetysixty {
@@ -332,6 +332,8 @@ body {
 	z-index:1000;
 	top:0;
 	box-shadow: 0px 1px 3px #333, inset 0px -1px 0px;
+	-moz-box-shadow: 0px 1px 3px #333, inset 0px -1px 0px;
+	-webkit-box-shadow: 0px 1px 3px #333, inset 0px -1px 0px;
 }
 
 #header a, #header a:visited {
@@ -471,7 +473,6 @@ aside.notice dl dd time {
 	float:right;
 	padding:10px 10px 20px 60px;
 	margin: 0px 0px 10px 20px;
-	position:relative;
 	border-left: 2px solid #485152;
 }
 
@@ -508,6 +509,8 @@ aside.notice dl dd time {
 
 .small-article .image{
 	box-shadow:0px 1px 3px rgba(0,0,0,0.4);
+	-moz-box-shadow:0px 1px 3px rgba(0,0,0,0.4);
+	-webkit-box-shadow:0px 1px 3px rgba(0,0,0,0.4);
 	width:260px;
 	height:150px;
 	background:#fff;
@@ -544,6 +547,8 @@ aside.notice dl dd time {
 	-moz-border-radius:6px;
 	-webkit-border-radius:6px;
 	box-shadow:inset 0px 1px 3px rgba(0,0,0,0.4);
+	-moz-box-shadow:inset 0px 1px 3px rgba(0,0,0,0.4);
+	-webkit-box-shadow:inset 0px 1px 3px rgba(0,0,0,0.4);
 
 }
 
@@ -557,6 +562,10 @@ aside.notice dl dd time {
 	opacity:1.0;
 }
 
+
+.home nav {
+	font-size:1.2em;
+}
 
 /* SINGLE POST */
 
@@ -585,6 +594,8 @@ aside.notice dl dd time {
 .single header aside.single_left img {
 	margin:4px;
 	box-shadow:0px 1px 3px rgba(0,0,0,0.4);
+	-moz-box-shadow:0px 1px 3px rgba(0,0,0,0.4);
+	-webkit-box-shadow:0px 1px 3px rgba(0,0,0,0.4);
 }
 
 .single header aside.single_left .text {
@@ -605,9 +616,11 @@ aside.notice dl dd time {
 
 .single article header .image img{
 	max-width:530px;
-	max-height:300px;
+	max-height:380px;
 	text-align:center;
 	box-shadow:0px 1px 3px rgba(0,0,0,0.4);
+	-moz-box-shadow:0px 1px 3px rgba(0,0,0,0.4);
+	-webkit-box-shadow:0px 1px 3px rgba(0,0,0,0.4);
 }
 
 .single article header h2 {
@@ -686,6 +699,8 @@ ol.commentlist li article header {
 
 ol.commentlist li article header img {
 	box-shadow:0px 1px 3px rgba(0,0,0,0.4);
+	-moz-box-shadow:0px 1px 3px rgba(0,0,0,0.4);
+	-webkit-box-shadow:0px 1px 3px rgba(0,0,0,0.4);
 	float:right;
 	position:relative;
 	right:-10px;
@@ -699,7 +714,7 @@ ol.commentlist li article nav {
 }
 
 #respond {
-	width:800px;
+	width:640px;
 	margin: 40px auto;
 }
 
@@ -731,7 +746,7 @@ ol.commentlist #respond {
 }
 
 #respond textarea{
-	width:80%;
+	width:95%;
 	font-size:1.2em;
 	padding:3px 5px;
 	border: 2px solid #485152;  
@@ -767,6 +782,8 @@ ol.commentlist #respond {
 
 .archive header .image img {
 	box-shadow:0px 1px 3px rgba(0,0,0,0.4);
+	-moz-box-shadow:0px 1px 3px rgba(0,0,0,0.4);
+	-webkit-box-shadow:0px 1px 3px rgba(0,0,0,0.4);
 }
 
 
@@ -817,9 +834,100 @@ ol.commentlist #respond {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 480px) {
-  /* Style adjustments for viewports 480px and over go here */
+@media only screen and (min-device-width: 320px) and (max-device-width: 801px) {
+	
+	body {
+		padding-top:0;
+		width:100%;
+		overflow:hidden;
+	}
+	
+	#header {
+		position:static;
+		width:100%;
+		height:auto;
+	}
 
+	#header #logo {
+		font-size:0.9em;
+		width:180px;
+	}
+	
+	#header .social {
+		width:120px;
+	}
+		
+	#header_tabs {
+		float:none;
+	}
+	
+	#header_tabs a{
+		font-size:1em;
+		margin: 3px 6px;
+	}
+	
+	.ninetysixty {
+		width:98%;
+	}
+	
+	#main .ninetysixty {
+		margin:0 auto;
+	}
+	
+	.sixtyfourty {
+		width:98%;
+		margin: 0 auto;
+	}	
+	
+	.home aside.notice {
+		display:none;
+	}
+	
+	.small-article {
+		float:none;
+		padding:0;
+		margin:0 0 20px;
+		position:static;
+	}
+
+	.small-article .text {
+		float:none;
+		width:auto;
+	}
+	
+	.small-article .image{
+		float:none;
+		margin-left:8px;
+	}
+	
+	.single aside {
+		display:none;
+	}
+	
+	.single article .text {
+		width:auto;
+	}
+	
+	.single article header .image img{
+		max-width:100%;
+		max-height:auto;
+	}
+	
+	.single article footer {
+		width:auto;
+	}
+	
+	.single article nav {
+		width:auto;
+	}
+	
+	ol.commentlist {
+		width:auto;
+	}
+	
+	#respond {
+		width:auto;
+	}
 }
 
 @media only screen and (min-width: 768px) {

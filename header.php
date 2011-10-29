@@ -11,7 +11,7 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 		<meta http-equiv="imagetoolbar" content="false" />
-		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale = 1.0">
 		<link rel="stylesheet" href="<?php bloginfo('template_url') ?>/style.css">
 		<script src="<?php bloginfo('template_url') ?>/js/libs/modernizr-2.0.6.min.js"></script>
 

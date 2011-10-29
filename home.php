@@ -10,10 +10,12 @@ $counter = 0;
 			<header>
 				<h2>Welcome to FoOls.</h2>
 			</header>
+			<div class="text">
 			<p>We are a team composed of translators, proofreaders, graphic editors and web developers.</p>
 			<p>Our focus lies in amateur translation of Japanese manga and tool development for such.</p>
-			<p>Contact with us can be established through comments to our posts, <a href="/forums">the forum</a>, <a href="">IRC</a>, by <a href="http://ask.foolrulez.com">asking us questions</a> or by <a href="http://github.com/FoOlRulez">filing a bug report</a>.</p>
+			<p>Contact with us can be established through comments to our posts, <a href="/forums">the forum</a>, <a href="irc://irc.irchighway.net/foolrulez">IRC</a>, <a href="http://webchat.irchighway.net/?channels=foolrulez">WebIRC</a>, by <a href="http://ask.foolrulez.com">asking us questions</a> or by <a href="http://github.com/FoOlRulez">filing a bug report</a>.</p>
 			<br/>
+			</div>
 			<footer>
 				<p>For the <strong>latest releases</strong>, look no further:</p>
 				<dl id="list_for_foolslide">
@@ -40,7 +42,7 @@ $counter = 0;
 			'link_to_post' => false, 'width' => 260, 'height' => 150));
 				?></a>
 						<footer>
-							<?php comments_popup_link('<img width="72" height="72" src="' . get_bloginfo('template_url') . '/images/comments.png" /> 0', ' <img width="72" height="72" src="' . get_bloginfo('template_url') . '/images/comments.png" />1', '<img src="' . get_bloginfo('template_url') . '/images/comments.png" /> %', '', ' <img width="72" height="72" src="' . get_bloginfo('template_url') . '/images/comments.png" /> Off'); ?>
+							<?php comments_popup_link('<img width="34" height="34" src="' . get_bloginfo('template_url') . '/images/comments.png" /> 0', ' <img width="34" height="34" src="' . get_bloginfo('template_url') . '/images/comments.png" />1', '<img width="34" height="34" src="' . get_bloginfo('template_url') . '/images/comments.png" /> %', '', ' <img width="34" height="34" src="' . get_bloginfo('template_url') . '/images/comments.png" /> Off'); ?>
 						</footer>
 					</div>
 				</article>

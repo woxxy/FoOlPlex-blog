@@ -37,21 +37,20 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="<?php bloginfo('template_url') ?>/js/libs/jquery-1.6.4.min.js"><\/script>')</script>
 
-
 <!-- scripts concatenated and minified via build script -->
 <script defer src="<?php bloginfo('template_url') ?>/js/plugins.js"></script>
-<script defer src="<?php bloginfo('template_url') ?>/js/script.js"></script>
 <!-- end scripts -->
 
 
 <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
 	 mathiasbynens.be/notes/async-analytics-snippet -->
 <script>
-	var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview'],['_trackPageLoadTime']];
+	var _gaq=[['_setAccount','UA-XXX'],['_trackPageview'],['_trackPageLoadTime']];
 	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
 		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
 		s.parentNode.insertBefore(g,s)}(document,'script'));
 </script>
+
 
 <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
 	 chromium.org/developers/how-tos/chrome-frame-getting-started -->
